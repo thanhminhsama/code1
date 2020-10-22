@@ -6,13 +6,30 @@
 /**
  * hàm lựa chọn mục được liệt kê trong hàm MyEnum
  */
-enum MyEnum {
-    //% block="one"
+enum MyEnum1 {
+    //% block="1"
     One,
-    //% block="two"
-    Two
+    //% block="2"
+    Two,
+    //% block="3"
+    Three,
+    //% block="4"
+    Four,
+    //% block="5"
+    Five
 }
-
+enum MyEnum2 {
+    //% block="1"
+    One,
+    //% block="2"
+    Two,
+    //% block="3"
+    Three,
+    //% block="4"
+    Four,
+    //% block="5"
+    Five
+}
 /**
  * Custom blocks
  */
@@ -31,7 +48,7 @@ namespace animations {
      * @param intervalt thời gian trễ
      */
     //% block="blink x $x y $y every $interval ms" 
-    export function blink(x:number, y:number, interval: number): void {
+    export function blink(x:MyEnum1, y:MyEnum2, interval: number): void {
         // Add code here
         let sprite = game.createSprite(x, y)
         sprite.setBlink(interval)
