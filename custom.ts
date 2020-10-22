@@ -17,7 +17,7 @@ enum MyEnum {
  * Custom blocks
  */
 //% weight=100 color=#0fbc11 icon=""
-namespace custom {
+namespace animations {
     /**
      * TODO: describe your function here
      * @param n describe parameter here, eg: 5
@@ -26,21 +26,13 @@ namespace custom {
      */
     /**
      * TODO: mô tả chức năng của bạn ở đây
-     * @param n mô tả tham số ở đây, eg: 1
-     * @param s mô tả tham số ở đây, eg: "Hello"
-     * @param e mô tả tham số ở đây
+     * @param x tọa độ LED theo hàng
+     * @param x tọa độ LED theo cột
+     * @param intervalt thời gian trễ
      */
-    //% block="do stuff with $n and $s and $e" 
-    export function doStuff(n: number, s: string, e: MyEnum): void {
+    //% block="blink x $x y $y every $interval ms" 
+    export function blink(x:number, y:number, interval: number): void {
         // Add code here
-    }
 
-    /**
-     * TODO: describe your function here
-     * @param value describe value here, eg: 5
-     */
-    //% block="computer fib with $value"
-    export function fib(value: number): number {
-        return value <= 1 ? value : fib(value -1) + fib(value - 2);
     }
 }
