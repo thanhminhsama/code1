@@ -48,7 +48,9 @@ namespace animations {
      * @param intervalt thời gian trễ
      */
     //% block="blink x $x y $y every $interval ms" 
-    export function blink(x:MyEnum1, y:MyEnum2, interval: number): void {
+    //% x.min=0 x.max=4 y.min=0 y.max=4 brightness.min=0 brightness.max=255
+    //% x.fieldOptions.precision=1 y.fieldOptions.precision=1
+    export function blink(x:number, y:number, interval: number): void {
         // Add code here
         let sprite = game.createSprite(x, y)
         sprite.setBlink(interval)
