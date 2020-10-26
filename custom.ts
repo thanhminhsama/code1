@@ -44,13 +44,11 @@ namespace animations {
     /**
      * TODO: mô tả chức năng của bạn ở đây
      * @param x tọa độ LED theo hàng
-     * @param x tọa độ LED theo cột
+     * @param y tọa độ LED theo cột
      * @param intervalt thời gian trễ
      */
     //% block="blink x $x y $y every $interval ms" 
-    //% x.min=0 x.max=4 y.min=0 y.max=4 brightness.min=0 brightness.max=255
-    //% x.fieldOptions.precision=1 y.fieldOptions.precision=1
-    export function blink(x:number, y:number, interval: number): void {
+    export function blink(x:MyEnum1, y:MyEnum2, interval: number): void {
         // Add code here
         let sprite = game.createSprite(x, y)
         sprite.setBlink(interval)
